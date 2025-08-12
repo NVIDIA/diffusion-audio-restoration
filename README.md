@@ -8,6 +8,8 @@
   <a href="https://research.nvidia.com/labs/adlr/A2SB/"><img src="https://img.shields.io/badge/Demo page-228B22" style="margin-right: 5px;"></a>
   <a href="https://github.com/NVIDIA/diffusion-audio-restoration"><img src='https://img.shields.io/badge/Github-Diffusion_Audio_Restoration-9C276A' style="margin-right: 5px;"></a>
   <a href="https://github.com/NVIDIA/diffusion-audio-restoration/stargazers"><img src="https://img.shields.io/github/stars/NVIDIA/diffusion-audio-restoration.svg?style=social"></a>
+</div>
+<div align="center" style="display: flex; justify-content: center; margin-top: 10px;">
   <a href="https://huggingface.co/nvidia/audio_to_audio_schrodinger_bridge"><img src="https://img.shields.io/badge/🤗-Checkpoints_(1_split)-ED5A22.svg" style="margin-right: 5px;"></a>
   <a href="https://huggingface.co/nvidia/audio_to_audio_schrodinger_bridge"><img src="https://img.shields.io/badge/🤗-Checkpoints_(2_split)-ED5A22.svg" style="margin-right: 5px;"></a>
 </div>

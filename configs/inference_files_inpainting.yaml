@@ -1,0 +1,50 @@
+data:
+  predict_filelist:
+    - filepath: "dummy1.wav"
+      output_subdir: "dummy1"
+    - filepath: "dummy2.wav"
+      output_subdir: "dummy2"
+  
+  transforms_gt:
+    - class_path: audio_transforms.transforms.ComplexSpectrogram
+      init_args:
+        n_fft: 2048
+        win_length: 2048
+        hop_length: 512
+    - class_path: audio_transforms.transforms.ComplexToMagInstPhase
+    - class_path: audio_transforms.transforms.SpectrogramDropDCTerm
+    - class_path: audio_transforms.transforms.PowerScaleSpectrogram
+      init_args:
+        power: 0.25
+        channels:
+          - 0
+  
+  transforms_aug:
+    - class_path: corruption.corruptions.TimestampedSegmentInpaintMaskTransform
+      init_args:
+        start_time: 1.0
+        end_time: 1.2
+        hop_length: 512
+        sampling_rate: 44100
+        fill_noise_level: 0.5
+    - class_path: corruption.corruptions.TimestampedSegmentInpaintMaskTransform
+      init_args:
+        start_time: 3.7
+        end_time: 4.0
+        hop_length: 512
+        sampling_rate: 44100
+        fill_noise_level: 0.5
+    - class_path: corruption.corruptions.TimestampedSegmentInpaintMaskTransform
+      init_args:
+        start_time: 8.0
+        end_time: 8.5
+        hop_length: 512
+        sampling_rate: 44100
+        fill_noise_level: 0.5
+    - class_path: corruption.corruptions.TimestampedSegmentInpaintMaskTransform
+      init_args:
+        start_time: 11.2
+        end_time: 12.0
+        hop_length: 512
+        sampling_rate: 44100
+        fill_noise_level: 0.5

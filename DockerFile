@@ -1,0 +1,10 @@
+FROM pytorch/pytorch:2.2.2-cuda12.1-cudnn8-runtime
+RUN apt-get update --fix-missing && apt-get install -y \
+    curl wget\
+    ca-certificates \
+    git \
+    bzip2 \
+    libx11-6 \
+    && rm -rf /var/lib/apt/lists/*
+RUN pip3 install inflect rotary-embedding-torch moviepy lightning tensorboard matplotlib scipy librosa gradio jsonargparse[signatures] einops lmdb h5py torch-audiomentations torchaudio
+RUN conda install ffmpeg

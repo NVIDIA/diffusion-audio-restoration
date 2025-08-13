@@ -74,6 +74,12 @@ cd inference/
 python A2SB_upsample_api.py -f DEGRADED.wav -o RESTORED.wav -n N_STEPS
 ```
 
+## Requirements
+
+```
+numpy, scipy, matplotlib, jsonargparse, librosa, soundfile, torch, torchaudio, einops, pytorch_lightning, rotary_embedding_torch, ssr_eval
+```
+
 
 # Citation
 ```
